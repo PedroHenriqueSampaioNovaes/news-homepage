@@ -1,0 +1,147 @@
+body {
+  padding: 80px 0;
+}
+
+p {
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+  line-height: 1.75;
+}
+
+.container {
+  max-width: 1115px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  padding: 10px;
+  transition: 0.2s ease-in-out;
+  color: hsl(236, 13%, 42%);
+}
+
+.menu a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.grid-principal {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.introducao {
+  background: url('../../assets/images/image-web-3-desktop.jpg') no-repeat
+    center;
+  background-size: cover;
+  grid-column: span 2;
+  min-height: 300px;
+}
+
+.titulo-principal {
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1;
+}
+
+.call-to-action {
+  display: inline-block;
+  margin-top: 25px;
+  background: hsl(5, 85%, 63%);
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  padding: 15px 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.call-to-action:hover {
+  background: hsl(240, 100%, 5%);
+}
+
+/* NEWS */
+.new {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  background: hsl(240, 100%, 5%);
+  padding: 20px;
+}
+
+.new .titulo {
+  color: hsl(35, 77%, 62%);
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.new .detalhes {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.new .detalhes:not(:nth-of-type(1)) {
+  border-top: 1px solid white;
+}
+
+.new .detalhes a .subtitulo {
+  color: white;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.new .detalhes a:hover .subtitulo {
+  color: hsl(35, 77%, 62%);
+}
+
+.new .manchete {
+  color: hsl(233, 8%, 79%);
+}
+
+/* TOP NOTÍCIAS */
+.top-noticias {
+  margin-top: 60px;
+}
+
+.top-noticias a {
+  display: flex;
+  gap: 30px;
+}
+
+.top-noticias img {
+  width: 100px;
+  object-fit: cover;
+}
+
+.top-noticias .rotulo {
+  color: hsl(233, 8%, 79%);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.top-noticias .subtitulo {
+  color: black;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.top-noticias a:hover .subtitulo {
+  color: hsl(5, 85%, 63%);
+}
