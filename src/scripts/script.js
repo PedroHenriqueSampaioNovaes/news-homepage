@@ -11,8 +11,22 @@ function openMenu(event) {
 
   navigation.classList.add(className);
 
+  function setAccessibility() {
+    const active = navigation.classList.contains(className);
+
+    if (active) {
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Fechar Menu');
+    } else {
+      menuButton.setAttribute('aria-label', 'Abrir Menu');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  }
+  setAccessibility();
+
   outsideClick(document.querySelector('.menu'), events, () => {
     navigation.classList.remove(className);
+    setAccessibility();
   });
 }
 
